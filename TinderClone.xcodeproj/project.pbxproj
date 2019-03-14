@@ -18,6 +18,7 @@
 		A490BF1E223A1B9E00C161CB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF1D223A1B9E00C161CB /* UIView.swift */; };
 		A490BF22223A264800C161CB /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */; };
 		A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */; };
+		A490BF26223A2EF000C161CB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF25223A2EF000C161CB /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A490BF1D223A1B9E00C161CB /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopNavStackView.swift; sourceTree = "<group>"; };
+		A490BF25223A2EF000C161CB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */,
 				A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */,
+				A490BF25223A2EF000C161CB /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A490BF26223A2EF000C161CB /* CardView.swift in Sources */,
 				A490BEEF223A1B7600C161CB /* ViewController.swift in Sources */,
 				A490BEF5223A1B7600C161CB /* TinderClone.xcdatamodeld in Sources */,
 				A490BF22223A264800C161CB /* HomeBottomControlsStackView.swift in Sources */,
