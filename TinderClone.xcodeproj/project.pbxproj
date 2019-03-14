@@ -15,6 +15,9 @@
 		A490BEFA223A1B7700C161CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A490BEF8223A1B7700C161CB /* LaunchScreen.storyboard */; };
 		A490BF05223A1B7800C161CB /* TinderCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF04223A1B7800C161CB /* TinderCloneTests.swift */; };
 		A490BF10223A1B7800C161CB /* TinderCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF0F223A1B7800C161CB /* TinderCloneUITests.swift */; };
+		A490BF1E223A1B9E00C161CB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF1D223A1B9E00C161CB /* UIView.swift */; };
+		A490BF22223A264800C161CB /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */; };
+		A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A490BF0B223A1B7800C161CB /* TinderCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinderCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A490BF0F223A1B7800C161CB /* TinderCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCloneUITests.swift; sourceTree = "<group>"; };
 		A490BF11223A1B7800C161CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A490BF1D223A1B9E00C161CB /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
+		A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopNavStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		A490BEEB223A1B7600C161CB /* TinderClone */ = {
 			isa = PBXGroup;
 			children = (
+				A490BF20223A261900C161CB /* Views */,
+				A490BF1F223A1BA700C161CB /* Extensions */,
 				A490BEEC223A1B7600C161CB /* AppDelegate.swift */,
 				A490BEEE223A1B7600C161CB /* ViewController.swift */,
 				A490BEF0223A1B7600C161CB /* Main.storyboard */,
@@ -126,6 +134,23 @@
 				A490BF11223A1B7800C161CB /* Info.plist */,
 			);
 			path = TinderCloneUITests;
+			sourceTree = "<group>";
+		};
+		A490BF1F223A1BA700C161CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A490BF1D223A1B9E00C161CB /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A490BF20223A261900C161CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */,
+				A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +286,9 @@
 			files = (
 				A490BEEF223A1B7600C161CB /* ViewController.swift in Sources */,
 				A490BEF5223A1B7600C161CB /* TinderClone.xcdatamodeld in Sources */,
+				A490BF22223A264800C161CB /* HomeBottomControlsStackView.swift in Sources */,
+				A490BF1E223A1B9E00C161CB /* UIView.swift in Sources */,
+				A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */,
 				A490BEED223A1B7600C161CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
