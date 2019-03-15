@@ -33,10 +33,9 @@ class CardView: UIView {
     }
     
     fileprivate func setupInformationLabel() {
-        informationLabel.text = "\(user.name) \(user.age)\n\(user.profession)"
+        informationLabel.attributedText = getAttributedInformationText()
         informationLabel.numberOfLines = 2
         informationLabel.textColor = .white
-        informationLabel.font = UIFont(name: "Avenir-Medium", size: 32)
         informationLabel.textAlignment = .left
         
         addSubview(informationLabel)
@@ -105,7 +104,7 @@ class CardView: UIView {
                 self.transform = .identity
             }
         }, completion: { _ in
-            UIView.animate(withDuration: 0.12, delay: 1.0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.10, delay: 1.0, options: .curveEaseOut, animations: {
                 self.transform = .identity
                 self.frame = CGRect(x: 12, y: 0, width: self.superview!.frame.width-24, height: self.superview!.frame.height)
                 if shouldDismissCard {
@@ -113,6 +112,16 @@ class CardView: UIView {
                 }
             }, completion: nil)
         })
+    }
+    
+    //MARK:- Helper Functions
+    
+    fileprivate func getAttributedInformationText() -> NSMutableAttributedString {
+        let attributedText = NSMutableAttributedString(string: user.name, attributes: [.font: UIFont.systemFont(ofSize: 32, weight: .heavy)])
+        attributedText.append(NSMutableAttributedString(string: " \(user.age)", attributes: [.font: UIFont.systemFont(ofSize: 24, weight: .light)]))
+        attributedText.append(NSMutableAttributedString(string: "\n\(user.profession)", attributes: [.font: UIFont.systemFont(ofSize: 20, weight: .regular)]))
+        
+        return attributedText
     }
     
     required init?(coder aDecoder: NSCoder) {
