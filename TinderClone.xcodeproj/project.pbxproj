@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A490BEED223A1B7600C161CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BEEC223A1B7600C161CB /* AppDelegate.swift */; };
-		A490BEEF223A1B7600C161CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BEEE223A1B7600C161CB /* ViewController.swift */; };
+		A490BEEF223A1B7600C161CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BEEE223A1B7600C161CB /* HomeController.swift */; };
 		A490BEF2223A1B7600C161CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A490BEF0223A1B7600C161CB /* Main.storyboard */; };
 		A490BEF5223A1B7600C161CB /* TinderClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A490BEF3223A1B7600C161CB /* TinderClone.xcdatamodeld */; };
 		A490BEF7223A1B7700C161CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A490BEF6223A1B7700C161CB /* Assets.xcassets */; };
@@ -19,6 +19,7 @@
 		A490BF22223A264800C161CB /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */; };
 		A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */; };
 		A490BF26223A2EF000C161CB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF25223A2EF000C161CB /* CardView.swift */; };
+		A490BF29223B77D900C161CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF28223B77D900C161CB /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 /* Begin PBXFileReference section */
 		A490BEE9223A1B7600C161CB /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A490BEEC223A1B7600C161CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A490BEEE223A1B7600C161CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A490BEEE223A1B7600C161CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A490BEF1223A1B7600C161CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A490BEF4223A1B7600C161CB /* TinderClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinderClone.xcdatamodel; sourceTree = "<group>"; };
 		A490BEF6223A1B7700C161CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopNavStackView.swift; sourceTree = "<group>"; };
 		A490BF25223A2EF000C161CB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A490BF28223B77D900C161CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +109,11 @@
 		A490BEEB223A1B7600C161CB /* TinderClone */ = {
 			isa = PBXGroup;
 			children = (
+				A490BF27223B77CE00C161CB /* Model */,
 				A490BF20223A261900C161CB /* Views */,
 				A490BF1F223A1BA700C161CB /* Extensions */,
 				A490BEEC223A1B7600C161CB /* AppDelegate.swift */,
-				A490BEEE223A1B7600C161CB /* ViewController.swift */,
+				A490BEEE223A1B7600C161CB /* HomeController.swift */,
 				A490BEF0223A1B7600C161CB /* Main.storyboard */,
 				A490BEF6223A1B7700C161CB /* Assets.xcassets */,
 				A490BEF8223A1B7700C161CB /* LaunchScreen.storyboard */,
@@ -154,6 +157,14 @@
 				A490BF25223A2EF000C161CB /* CardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A490BF27223B77CE00C161CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A490BF28223B77D900C161CB /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A490BF26223A2EF000C161CB /* CardView.swift in Sources */,
-				A490BEEF223A1B7600C161CB /* ViewController.swift in Sources */,
+				A490BEEF223A1B7600C161CB /* HomeController.swift in Sources */,
 				A490BEF5223A1B7600C161CB /* TinderClone.xcdatamodeld in Sources */,
 				A490BF22223A264800C161CB /* HomeBottomControlsStackView.swift in Sources */,
+				A490BF29223B77D900C161CB /* User.swift in Sources */,
 				A490BF1E223A1B9E00C161CB /* UIView.swift in Sources */,
 				A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */,
 				A490BEED223A1B7600C161CB /* AppDelegate.swift in Sources */,
