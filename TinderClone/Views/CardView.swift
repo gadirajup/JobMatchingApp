@@ -9,8 +9,8 @@
 import UIKit
 
 class CardView: UIView {
-    var imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
-    var informationLabel = UILabel()
+    fileprivate var imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
+    fileprivate var informationLabel = UILabel()
     
     var cardViewModel: CardViewModel! {
         didSet {

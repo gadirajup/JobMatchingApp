@@ -19,8 +19,8 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupDummyCards()
         setupDummyCardViewModels()
+        setupDummyCards()
         setupLayout()
     }
     
@@ -36,8 +36,15 @@ class HomeController: UIViewController {
     }
     
     fileprivate func setupDummyCardViewModels() {
-        cardViewModels.append(User(name: "Kelly", age: 23, profession: "Music DJ", imageName: "lady5c").toCardViewModel())
-        cardViewModels.append(User(name: "Rachel", age: 30, profession: "Fashionista", imageName: "lady4c").toCardViewModel())
+        let dummyModels = [
+            Advertiser(title: "Need Coffee", brandName: "Keep your coffee hot!", posterPhotoName: "coffee"),
+            User(name: "Kelly", age: 23, profession: "Music DJ", imageName: "lady5c"),
+            User(name: "Rachel", age: 30, profession: "Fashionista", imageName: "lady4c")
+        ] as [ProducesCardViewModel]
+        
+        dummyModels.forEach { (model) in
+            self.cardViewModels.append(model.toCardViewModel())
+        }
     }
     
     fileprivate func setupLayout() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A44F7DED223CF5B400E48FE9 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DEC223CF5B400E48FE9 /* CardViewModel.swift */; };
+		A44F7DEF223CFB8A00E48FE9 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DEE223CFB8A00E48FE9 /* Advertiser.swift */; };
 		A490BEED223A1B7600C161CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BEEC223A1B7600C161CB /* AppDelegate.swift */; };
 		A490BEEF223A1B7600C161CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BEEE223A1B7600C161CB /* HomeController.swift */; };
 		A490BEF2223A1B7600C161CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A490BEF0223A1B7600C161CB /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		A44F7DEC223CF5B400E48FE9 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		A44F7DEE223CFB8A00E48FE9 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		A490BEE9223A1B7600C161CB /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A490BEEC223A1B7600C161CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A490BEEE223A1B7600C161CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A490BF28223B77D900C161CB /* User.swift */,
+				A44F7DEE223CFB8A00E48FE9 /* Advertiser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44F7DEF223CFB8A00E48FE9 /* Advertiser.swift in Sources */,
 				A490BF26223A2EF000C161CB /* CardView.swift in Sources */,
 				A490BEEF223A1B7600C161CB /* HomeController.swift in Sources */,
 				A490BEF5223A1B7600C161CB /* TinderClone.xcdatamodeld in Sources */,
