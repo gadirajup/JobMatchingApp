@@ -12,10 +12,10 @@ struct User: ProducesCardViewModel {
     let name: String
     let age: Int
     let profession: String
-    let imageName: String
+    let imageNames: [String]
     
     func toCardViewModel() -> CardViewModel {
-        return CardViewModel(imageName: imageName, attributedString: getAttributedInformationText(), textAlignment: .left)
+        return CardViewModel(imageNames: imageNames, attributedString: getAttributedInformationText(), textAlignment: .left)
     }
     
     fileprivate func getAttributedInformationText() -> NSMutableAttributedString {

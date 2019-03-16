@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A44F7DED223CF5B400E48FE9 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DEC223CF5B400E48FE9 /* CardViewModel.swift */; };
 		A44F7DEF223CFB8A00E48FE9 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DEE223CFB8A00E48FE9 /* Advertiser.swift */; };
+		A44F7DF2223D013800E48FE9 /* UIimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DF1223D013800E48FE9 /* UIimageView.swift */; };
+		A44F7DF4223D01A200E48FE9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DF3223D01A200E48FE9 /* UIColor.swift */; };
 		A490BEED223A1B7600C161CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BEEC223A1B7600C161CB /* AppDelegate.swift */; };
 		A490BEEF223A1B7600C161CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BEEE223A1B7600C161CB /* HomeController.swift */; };
 		A490BEF2223A1B7600C161CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A490BEF0223A1B7600C161CB /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		A44F7DEC223CF5B400E48FE9 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		A44F7DEE223CFB8A00E48FE9 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
+		A44F7DF1223D013800E48FE9 /* UIimageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageView.swift; sourceTree = "<group>"; };
+		A44F7DF3223D01A200E48FE9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A490BEE9223A1B7600C161CB /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A490BEEC223A1B7600C161CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A490BEEE223A1B7600C161CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -132,8 +136,8 @@
 				A44F7DEA223CF59200E48FE9 /* ViewModels */,
 				A490BF27223B77CE00C161CB /* Model */,
 				A490BF20223A261900C161CB /* Views */,
-				A490BF1F223A1BA700C161CB /* Extensions */,
 				A44F7DEB223CF59F00E48FE9 /* Controllers */,
+				A490BF1F223A1BA700C161CB /* Extensions */,
 				A490BEEC223A1B7600C161CB /* AppDelegate.swift */,
 				A490BEF0223A1B7600C161CB /* Main.storyboard */,
 				A490BEF6223A1B7700C161CB /* Assets.xcassets */,
@@ -166,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				A490BF1D223A1B9E00C161CB /* UIView.swift */,
+				A44F7DF1223D013800E48FE9 /* UIimageView.swift */,
+				A44F7DF3223D01A200E48FE9 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44F7DEF223CFB8A00E48FE9 /* Advertiser.swift in Sources */,
+				A44F7DF4223D01A200E48FE9 /* UIColor.swift in Sources */,
 				A490BF26223A2EF000C161CB /* CardView.swift in Sources */,
 				A490BEEF223A1B7600C161CB /* HomeController.swift in Sources */,
 				A490BEF5223A1B7600C161CB /* TinderClone.xcdatamodeld in Sources */,
@@ -330,6 +337,7 @@
 				A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */,
 				A490BEED223A1B7600C161CB /* AppDelegate.swift in Sources */,
 				A44F7DED223CF5B400E48FE9 /* CardViewModel.swift in Sources */,
+				A44F7DF2223D013800E48FE9 /* UIimageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

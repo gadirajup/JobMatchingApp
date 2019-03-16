@@ -38,8 +38,9 @@ class HomeController: UIViewController {
     fileprivate func setupDummyCardViewModels() {
         let dummyModels = [
             Advertiser(title: "Need Coffee", brandName: "Keep your coffee hot!", posterPhotoName: "coffee"),
-            User(name: "Kelly", age: 23, profession: "Music DJ", imageName: "lady5c"),
-            User(name: "Rachel", age: 30, profession: "Fashionista", imageName: "lady4c")
+            User(name: "Phoebe", age: 23, profession: "Music DJ", imageNames: ["lady5c", "lady4c"]),
+            User(name: "Monica", age: 30, profession: "Fashionista", imageNames: ["lady4c"]),
+            User(name: "Rachel", age: 30, profession: "Fashionista", imageNames: ["Rachel1", "Rachel2", "Rachel3"])
         ] as [ProducesCardViewModel]
         
         dummyModels.forEach { (model) in

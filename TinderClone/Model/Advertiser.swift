@@ -14,7 +14,7 @@ struct Advertiser: ProducesCardViewModel {
     let posterPhotoName: String
     
     func toCardViewModel() -> CardViewModel {
-        return CardViewModel(imageName: posterPhotoName, attributedString: getAttributedInformationText(), textAlignment: .center)
+        return CardViewModel(imageNames: [posterPhotoName], attributedString: getAttributedInformationText(), textAlignment: .center)
     }
     
     func getAttributedInformationText() -> NSAttributedString {
