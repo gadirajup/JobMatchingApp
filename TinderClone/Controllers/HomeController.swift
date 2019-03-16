@@ -10,7 +10,7 @@ import UIKit
 
 class HomeController: UIViewController {
 
-    var users = [User]()
+    var cardViewModels = [CardViewModel]()
     
     let topStackView = HomeTopNavStackView()
     let cardsDeckView = UIView()
@@ -19,25 +19,25 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupDummyUsers()
         setupDummyCards()
+        setupDummyCardViewModels()
         setupLayout()
     }
     
-    fileprivate func setupDummyUsers() {
-        users.append(User(name: "Kelly", age: 23, profession: "Music DJ", imageName: "lady5c"))
-        users.append(User(name: "Rachel", age: 30, profession: "Fashionista", imageName: "lady4c"))
-    }
-    
     fileprivate func setupDummyCards() {
-        users.forEach { (user) in
+        cardViewModels.forEach { (cardViewModel) in
             let cardView = CardView()
-            cardView.user = user
+            cardView.cardViewModel = cardViewModel
             
             cardsDeckView.addSubview(cardView)
             
             cardView.fillSuperview(padding: UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12))
         }
+    }
+    
+    fileprivate func setupDummyCardViewModels() {
+        cardViewModels.append(User(name: "Kelly", age: 23, profession: "Music DJ", imageName: "lady5c").toCardViewModel())
+        cardViewModels.append(User(name: "Rachel", age: 30, profession: "Fashionista", imageName: "lady4c").toCardViewModel())
     }
     
     fileprivate func setupLayout() {

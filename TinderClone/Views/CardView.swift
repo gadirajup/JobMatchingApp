@@ -12,7 +12,7 @@ class CardView: UIView {
     var imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
     var informationLabel = UILabel()
     
-    var user: User! {
+    var cardViewModel: CardViewModel! {
         didSet {
             setupLayout()
         }
@@ -33,10 +33,10 @@ class CardView: UIView {
     }
     
     fileprivate func setupInformationLabel() {
-        informationLabel.attributedText = getAttributedInformationText()
+        informationLabel.attributedText = cardViewModel.attributedString
         informationLabel.numberOfLines = 2
         informationLabel.textColor = .white
-        informationLabel.textAlignment = .left
+        informationLabel.textAlignment = cardViewModel.textAlignment
         
         addSubview(informationLabel)
         
@@ -44,7 +44,7 @@ class CardView: UIView {
     }
     
     fileprivate func setupImageView() {
-        imageView.image = UIImage(named: user.imageName)
+        imageView.image = UIImage(named: cardViewModel.imageName)
         imageView.contentMode = .scaleAspectFill
         
         addSubview(imageView)
@@ -115,14 +115,6 @@ class CardView: UIView {
     }
     
     //MARK:- Helper Functions
-    
-    fileprivate func getAttributedInformationText() -> NSMutableAttributedString {
-        let attributedText = NSMutableAttributedString(string: user.name, attributes: [.font: UIFont.systemFont(ofSize: 32, weight: .heavy)])
-        attributedText.append(NSMutableAttributedString(string: " \(user.age)", attributes: [.font: UIFont.systemFont(ofSize: 24, weight: .light)]))
-        attributedText.append(NSMutableAttributedString(string: "\n\(user.profession)", attributes: [.font: UIFont.systemFont(ofSize: 20, weight: .regular)]))
-        
-        return attributedText
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
