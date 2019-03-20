@@ -12,4 +12,4 @@ As a freelancer
 * Exciting way to view clients before matching
 * Get yourself out there to find your next project
 
-![Screenshot][main.png]
+![Screenshot](Jobber.png)
