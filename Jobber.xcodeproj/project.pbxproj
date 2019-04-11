@@ -23,24 +23,9 @@
 		A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */; };
 		A490BF26223A2EF000C161CB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF25223A2EF000C161CB /* CardView.swift */; };
 		A490BF29223B77D900C161CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF28223B77D900C161CB /* User.swift */; };
+		A4BFC65E225ECE3400E98BA1 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC65D225ECE3400E98BA1 /* RegistrationViewModel.swift */; };
+		A4BFC660225ED5E400E98BA1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC65F225ED5E400E98BA1 /* Theme.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A490BF01223A1B7800C161CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A490BEE1223A1B7600C161CB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A490BEE8223A1B7600C161CB;
-			remoteInfo = Jobber;
-		};
-		A490BF0C223A1B7800C161CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A490BEE1223A1B7600C161CB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A490BEE8223A1B7600C161CB;
-			remoteInfo = Jobber;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A44F7DEC223CF5B400E48FE9 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
@@ -56,31 +41,17 @@
 		A490BEF6223A1B7700C161CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A490BEF9223A1B7700C161CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A490BEFB223A1B7700C161CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A490BF00223A1B7800C161CB /* JobberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A490BF0B223A1B7800C161CB /* JobberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A490BF1D223A1B9E00C161CB /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A490BF21223A264800C161CB /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		A490BF23223A2A3700C161CB /* HomeTopNavStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopNavStackView.swift; sourceTree = "<group>"; };
 		A490BF25223A2EF000C161CB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A490BF28223B77D900C161CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A4BFC65D225ECE3400E98BA1 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		A4BFC65F225ED5E400E98BA1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A490BEE6223A1B7600C161CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A490BEFD223A1B7700C161CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A490BF08223A1B7800C161CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -94,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A44F7DEC223CF5B400E48FE9 /* CardViewModel.swift */,
+				A4BFC65D225ECE3400E98BA1 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -119,8 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				A490BEE9223A1B7600C161CB /* Jobber.app */,
-				A490BF00223A1B7800C161CB /* JobberTests.xctest */,
-				A490BF0B223A1B7800C161CB /* JobberUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +102,7 @@
 				A490BF27223B77CE00C161CB /* Model */,
 				A490BF20223A261900C161CB /* Views */,
 				A44F7DEB223CF59F00E48FE9 /* Controllers */,
+				A4BFC661225ED5E700E98BA1 /* Services */,
 				A490BF1F223A1BA700C161CB /* Extensions */,
 				A490BEEC223A1B7600C161CB /* AppDelegate.swift */,
 				A490BEF0223A1B7600C161CB /* Main.storyboard */,
@@ -172,6 +143,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A4BFC661225ED5E700E98BA1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFC65F225ED5E400E98BA1 /* Theme.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,42 +171,6 @@
 			productReference = A490BEE9223A1B7600C161CB /* Jobber.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A490BEFF223A1B7700C161CB /* JobberTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A490BF17223A1B7800C161CB /* Build configuration list for PBXNativeTarget "JobberTests" */;
-			buildPhases = (
-				A490BEFC223A1B7700C161CB /* Sources */,
-				A490BEFD223A1B7700C161CB /* Frameworks */,
-				A490BEFE223A1B7700C161CB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A490BF02223A1B7800C161CB /* PBXTargetDependency */,
-			);
-			name = JobberTests;
-			productName = JobberTests;
-			productReference = A490BF00223A1B7800C161CB /* JobberTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A490BF0A223A1B7800C161CB /* JobberUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A490BF1A223A1B7800C161CB /* Build configuration list for PBXNativeTarget "JobberUITests" */;
-			buildPhases = (
-				A490BF07223A1B7800C161CB /* Sources */,
-				A490BF08223A1B7800C161CB /* Frameworks */,
-				A490BF09223A1B7800C161CB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A490BF0D223A1B7800C161CB /* PBXTargetDependency */,
-			);
-			name = JobberUITests;
-			productName = JobberUITests;
-			productReference = A490BF0B223A1B7800C161CB /* JobberUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -240,14 +183,7 @@
 				TargetAttributes = {
 					A490BEE8223A1B7600C161CB = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					A490BEFF223A1B7700C161CB = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = A490BEE8223A1B7600C161CB;
-					};
-					A490BF0A223A1B7800C161CB = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = A490BEE8223A1B7600C161CB;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -265,8 +201,6 @@
 			projectRoot = "";
 			targets = (
 				A490BEE8223A1B7600C161CB /* Jobber */,
-				A490BEFF223A1B7700C161CB /* JobberTests */,
-				A490BF0A223A1B7800C161CB /* JobberUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,20 +216,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A490BEFE223A1B7700C161CB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A490BF09223A1B7800C161CB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -306,6 +226,7 @@
 				A44F7DF8223D1F0D00E48FE9 /* CustomTextField.swift in Sources */,
 				A44F7DEF223CFB8A00E48FE9 /* Advertiser.swift in Sources */,
 				A44F7DF4223D01A200E48FE9 /* UIColor.swift in Sources */,
+				A4BFC65E225ECE3400E98BA1 /* RegistrationViewModel.swift in Sources */,
 				A490BF26223A2EF000C161CB /* CardView.swift in Sources */,
 				A490BEEF223A1B7600C161CB /* HomeController.swift in Sources */,
 				A490BF22223A264800C161CB /* HomeBottomControlsStackView.swift in Sources */,
@@ -314,39 +235,13 @@
 				A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */,
 				A490BEED223A1B7600C161CB /* AppDelegate.swift in Sources */,
 				A44F7DED223CF5B400E48FE9 /* CardViewModel.swift in Sources */,
+				A4BFC660225ED5E400E98BA1 /* Theme.swift in Sources */,
 				A44F7DF2223D013800E48FE9 /* UIimageView.swift in Sources */,
 				A44F7DF6223D18F800E48FE9 /* RegistrationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A490BEFC223A1B7700C161CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A490BF07223A1B7800C161CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A490BF02223A1B7800C161CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A490BEE8223A1B7600C161CB /* Jobber */;
-			targetProxy = A490BF01223A1B7800C161CB /* PBXContainerItemProxy */;
-		};
-		A490BF0D223A1B7800C161CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A490BEE8223A1B7600C161CB /* Jobber */;
-			targetProxy = A490BF0C223A1B7800C161CB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A490BEF0223A1B7600C161CB /* Main.storyboard */ = {
@@ -497,7 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.prudhvi.Jobber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -515,90 +410,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.prudhvi.Jobber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A490BF18223A1B7800C161CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4479HNAQMJ;
-				INFOPLIST_FILE = JobberTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.prudhvi.JobberTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jobber.app/Jobber";
-			};
-			name = Debug;
-		};
-		A490BF19223A1B7800C161CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4479HNAQMJ;
-				INFOPLIST_FILE = JobberTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.prudhvi.JobberTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jobber.app/Jobber";
-			};
-			name = Release;
-		};
-		A490BF1B223A1B7800C161CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4479HNAQMJ;
-				INFOPLIST_FILE = JobberUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.prudhvi.JobberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Jobber;
-			};
-			name = Debug;
-		};
-		A490BF1C223A1B7800C161CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4479HNAQMJ;
-				INFOPLIST_FILE = JobberUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.prudhvi.JobberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Jobber;
 			};
 			name = Release;
 		};
@@ -619,24 +432,6 @@
 			buildConfigurations = (
 				A490BF15223A1B7800C161CB /* Debug */,
 				A490BF16223A1B7800C161CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A490BF17223A1B7800C161CB /* Build configuration list for PBXNativeTarget "JobberTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A490BF18223A1B7800C161CB /* Debug */,
-				A490BF19223A1B7800C161CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A490BF1A223A1B7800C161CB /* Build configuration list for PBXNativeTarget "JobberUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A490BF1B223A1B7800C161CB /* Debug */,
-				A490BF1C223A1B7800C161CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

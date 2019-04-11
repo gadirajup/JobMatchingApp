@@ -17,6 +17,7 @@ class RegistrationController: UIViewController {
     let registerButton = UIButton(type: .system)
     lazy var stackView = UIStackView(arrangedSubviews: [selectPhotoButton, fullNameTextField, emailTextField, passwordTextField, registerButton])
     let gradientLayer = CAGradientLayer()
+    let registrationViewModel = RegistrationViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class RegistrationController: UIViewController {
         setup()
         setupNotificationObservers()
         setupGestures()
+        setupRegistrationViewModelObserver()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,6 +50,18 @@ class RegistrationController: UIViewController {
         setupPasswordTextField()
         setupRegisterButton()
         setupStackView()
+    }
+    
+    fileprivate func setupRegistrationViewModelObserver() {
+        registrationViewModel.isFormValidObserver = { [weak self] (isFormValid) in
+            self?.registerButton.isEnabled = isFormValid
+            
+            if isFormValid {
+                self?.registerButton.backgroundColor = Theme.theme.purple
+            } else {
+                self?.registerButton.backgroundColor = #colorLiteral(red: 0.8875266314, green: 0.8822509646, blue: 0.8915820718, alpha: 1)
+            }
+        }
     }
     
     fileprivate func setupNotificationObservers() {
@@ -77,18 +91,21 @@ class RegistrationController: UIViewController {
     fileprivate func setupFullNameTextField() {
         fullNameTextField.placeholder = "Enter full name"
         fullNameTextField.backgroundColor = .white
+        fullNameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
     
     fileprivate func setupEmailTextField() {
         emailTextField.placeholder = "Enter email"
         emailTextField.keyboardType = .emailAddress
         emailTextField.backgroundColor = .white
+        emailTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
     
     fileprivate func setupPasswordTextField() {
         passwordTextField.placeholder = "Enter password"
         passwordTextField.isSecureTextEntry = true
         passwordTextField.backgroundColor = .white
+        passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
     
     fileprivate func setupRegisterButton() {
@@ -96,9 +113,11 @@ class RegistrationController: UIViewController {
         
         registerButton.setTitle("Register", for: .normal)
         registerButton.setTitleColor(.white, for: .normal)
-        registerButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        registerButton.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        registerButton.setTitleColor(.gray, for: .disabled)
+        registerButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        registerButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         registerButton.layer.cornerRadius = 25
+        registerButton.isEnabled = false
     }
     
     fileprivate func setupStackView() {
@@ -112,10 +131,10 @@ class RegistrationController: UIViewController {
     }
     
     fileprivate func setupGradientLayer() {
-        gradientLayer.colors = [#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1).cgColor, #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1).cgColor]
+        gradientLayer.colors = [Theme.theme.purple.cgColor, Theme.theme.pink.cgColor]
         gradientLayer.locations = [0, 1]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         gradientLayer.frame = view.frame
         view.layer.addSublayer(gradientLayer)
     }
@@ -154,5 +173,14 @@ class RegistrationController: UIViewController {
         present(homeController, animated: true, completion: nil)
     }
     
+    @objc fileprivate func handleTextChange(textField: UITextField) {
+        if textField == fullNameTextField {
+            registrationViewModel.fullName = textField.text
+        } else if textField == emailTextField {
+            registrationViewModel.email = textField.text
+        } else {
+            registrationViewModel.password = textField.text
+        }
+    }
 }
 

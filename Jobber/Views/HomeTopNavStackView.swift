@@ -28,10 +28,11 @@ class HomeTopNavStackView: UIStackView {
     }
     
     fileprivate func setupUI() {
-        settingsButton.setImage(#imageLiteral(resourceName: "Profile_Icon").withRenderingMode(.alwaysOriginal), for: .normal)
-        messageButton.setImage(#imageLiteral(resourceName: "Messages_Icon").withRenderingMode(.alwaysOriginal), for: .normal)
+        settingsButton.setImage(#imageLiteral(resourceName: "Profile").withRenderingMode(.alwaysOriginal), for: .normal)
+        messageButton.setImage(#imageLiteral(resourceName: "Messages").withRenderingMode(.alwaysOriginal), for: .normal)
         logoLabel.text = "Jobber"
-        logoLabel.font = UIFont.systemFont(ofSize: 21, weight: .heavy)
+        logoLabel.font = UIFont.systemFont(ofSize: 42, weight: .heavy)
+        logoLabel.textColor = Theme.theme.titleColor
     }
     
     fileprivate func setupStackView() {
