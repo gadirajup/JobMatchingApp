@@ -9,6 +9,12 @@
 import UIKit
 
 class RegistrationViewModel {
+    
+    // use bindable
+    var image = Bindable<UIImage>()
+    
+//    otherwise normally
+    
     var fullName: String? { didSet { checkFromValidity() } }
     var email: String? { didSet { checkFromValidity() } }
     var password: String? { didSet { checkFromValidity() } }

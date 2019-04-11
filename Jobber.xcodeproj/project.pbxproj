@@ -27,6 +27,7 @@
 		A4BFC65E225ECE3400E98BA1 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC65D225ECE3400E98BA1 /* RegistrationViewModel.swift */; };
 		A4BFC660225ED5E400E98BA1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC65F225ED5E400E98BA1 /* Theme.swift */; };
 		A4BFC663225EDD9D00E98BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4BFC662225EDD9C00E98BA1 /* GoogleService-Info.plist */; };
+		A4BFC665225EF46A00E98BA1 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC664225EF46A00E98BA1 /* Bindable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		A4BFC65D225ECE3400E98BA1 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		A4BFC65F225ED5E400E98BA1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A4BFC662225EDD9C00E98BA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4BFC664225EF46A00E98BA1 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				A490BEF8223A1B7700C161CB /* LaunchScreen.storyboard */,
 				A490BEFB223A1B7700C161CB /* Info.plist */,
 				A4BFC662225EDD9C00E98BA1 /* GoogleService-Info.plist */,
+				A4BFC664225EF46A00E98BA1 /* Bindable.swift */,
 			);
 			path = Jobber;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				A490BF29223B77D900C161CB /* User.swift in Sources */,
 				A490BF1E223A1B9E00C161CB /* UIView.swift in Sources */,
 				A490BF24223A2A3700C161CB /* HomeTopNavStackView.swift in Sources */,
+				A4BFC665225EF46A00E98BA1 /* Bindable.swift in Sources */,
 				A490BEED223A1B7600C161CB /* AppDelegate.swift in Sources */,
 				A44F7DED223CF5B400E48FE9 /* CardViewModel.swift in Sources */,
 				A4BFC660225ED5E400E98BA1 /* Theme.swift in Sources */,

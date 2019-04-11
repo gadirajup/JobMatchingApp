@@ -36,6 +36,11 @@ class RegistrationController: UIViewController {
         setupRegistrationViewModelObserver()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNotificationObservers()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -70,6 +75,10 @@ class RegistrationController: UIViewController {
                 self?.registerButton.backgroundColor = #colorLiteral(red: 0.8875266314, green: 0.8822509646, blue: 0.8915820718, alpha: 1)
             }
         }
+        
+        registrationViewModel.image.bind { [weak self] (image) in
+            self?.selectPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
     }
     
     fileprivate func setupNotificationObservers() {
@@ -94,6 +103,9 @@ class RegistrationController: UIViewController {
         selectPhotoButton.setTitleColor(.black, for: .normal)
         selectPhotoButton.backgroundColor = .white
         selectPhotoButton.layer.cornerRadius = 12
+        selectPhotoButton.imageView?.contentMode = .scaleAspectFill
+        selectPhotoButton.clipsToBounds = true
+        selectPhotoButton.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
     }
     
     fileprivate func setupFullNameTextField() {
@@ -204,6 +216,12 @@ class RegistrationController: UIViewController {
         }
     }
     
+    @objc fileprivate func handleSelectPhoto() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     fileprivate func showHUDWithError(error: Error) {
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Failed Registration"
@@ -214,3 +232,14 @@ class RegistrationController: UIViewController {
     }
 }
 
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as? UIImage
+        registrationViewModel.image.value = image
+        dismiss(animated: true, completion: nil)
+    }
+}
