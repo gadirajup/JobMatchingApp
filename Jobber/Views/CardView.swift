@@ -10,35 +10,32 @@ import UIKit
 
 class CardView: UIView {
     
-    // Configurations
+    // Properties
     let dismissDuration = 0.75
     let returnDuration = 0.10
     let returnDelay = 1.0
     let maxRotationAngle = 1080
     let barDeselectedColor = UIColor(white: 0, alpha: 0.1)
-    
-    // Variables
-    
-    
-    // Encapsulated Variables
-    fileprivate var imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
-    fileprivate var informationLabel = UILabel()
-    fileprivate var barsStackView = UIStackView()
     fileprivate var imageIndex = 0
-    
     var cardViewModel: CardViewModel! {
         didSet {
             setupLayout()
         }
     }
     
+
+    // UI Elements
+    fileprivate var imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
+    fileprivate var informationLabel = UILabel()
+    fileprivate var barsStackView = UIStackView()
+    
+    
+    // Setup
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupGestures()
     }
-
-    //MARK:- Setup Functions
     
     fileprivate func setupLayout() {
         setupView()
@@ -52,7 +49,7 @@ class CardView: UIView {
         
         addSubview(barsStackView)
         
-        barsStackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 8, bottom: 0, right: 8), size: .init(width: 0, height: 4))
+        barsStackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 16, bottom: 0, right: 16), size: .init(width: 0, height: 4))
         
         barsStackView.spacing = 4
         barsStackView.distribution = .fillEqually
@@ -63,6 +60,7 @@ class CardView: UIView {
             barView.backgroundColor = barDeselectedColor
             barsStackView.addArrangedSubview(barView)
         }
+        
         barsStackView.arrangedSubviews.first?.backgroundColor = .white
     }
     
@@ -80,7 +78,7 @@ class CardView: UIView {
     fileprivate func setupImageView() {
         addSubview(imageView)
         
-        imageView.fillSuperview()
+        imageView.fillSuperview(padding: UIEdgeInsets.init(top: 0, left: 8, bottom: 0, right: 8))
         
         imageView.image = UIImage(named: cardViewModel.imageNames.first ?? "")
         imageView.contentMode = .scaleAspectFill
@@ -100,11 +98,6 @@ class CardView: UIView {
     fileprivate func setupView() {
         layer.cornerRadius = 14
         clipsToBounds = false
-        
-//        layer.shadowColor = UIColor.black.cgColor
-//        layer.shadowOffset = CGSize(width: 0, height: 3)
-//        layer.shadowRadius = 5
-//        layer.shadowOpacity = 0.3
     }
     
     fileprivate func setupGestures() {

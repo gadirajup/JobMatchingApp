@@ -14,17 +14,28 @@ class HomeTopNavStackView: UIStackView {
     
     let settingsButton = UIButton(type: .system)
     let messageButton = UIButton(type: .system)
-    let fireImageView = UIImageView(image: #imageLiteral(resourceName: "app_icon"))
+    let logoLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        fireImageView.contentMode = .scaleAspectFit
-        settingsButton.setImage(#imageLiteral(resourceName: "top_left_profile").withRenderingMode(.alwaysOriginal), for: .normal)
-        messageButton.setImage(#imageLiteral(resourceName: "top_right_messages").withRenderingMode(.alwaysOriginal), for: .normal)
-        
-        
-        [settingsButton, fireImageView, messageButton].forEach({ (view) in
+        setup()
+    }
+    
+    fileprivate func setup() {
+        setupUI()
+        setupStackView()
+    }
+    
+    fileprivate func setupUI() {
+        settingsButton.setImage(#imageLiteral(resourceName: "Profile_Icon").withRenderingMode(.alwaysOriginal), for: .normal)
+        messageButton.setImage(#imageLiteral(resourceName: "Messages_Icon").withRenderingMode(.alwaysOriginal), for: .normal)
+        logoLabel.text = "Jobber"
+        logoLabel.font = UIFont.systemFont(ofSize: 21, weight: .heavy)
+    }
+    
+    fileprivate func setupStackView() {
+        [settingsButton, logoLabel, messageButton].forEach({ (view) in
             addArrangedSubview(view)
         })
         
