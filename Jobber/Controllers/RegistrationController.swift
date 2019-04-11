@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import Firebase
+import JGProgressHUD
 
 class RegistrationController: UIViewController {
     
+    // Properties
+    let registrationViewModel = RegistrationViewModel()
+
+    
+    // UI Elements
+    let gradientLayer = CAGradientLayer()
     let selectPhotoButton = UIButton(type: .system)
     let fullNameTextField = CustomTextField()
     let emailTextField = CustomTextField()
     let passwordTextField = CustomTextField()
     let registerButton = UIButton(type: .system)
     lazy var stackView = UIStackView(arrangedSubviews: [selectPhotoButton, fullNameTextField, emailTextField, passwordTextField, registerButton])
-    let gradientLayer = CAGradientLayer()
-    let registrationViewModel = RegistrationViewModel()
     
+    
+    // Init
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,7 +87,7 @@ class RegistrationController: UIViewController {
     }
     
     fileprivate func setupSelectPhotoButton() {
-        selectPhotoButton.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        selectPhotoButton.heightAnchor.constraint(equalToConstant: 300).isActive = true
         
         selectPhotoButton.setTitle("Select Photo", for: .normal)
         selectPhotoButton.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: .heavy)
@@ -118,6 +126,7 @@ class RegistrationController: UIViewController {
         registerButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         registerButton.layer.cornerRadius = 25
         registerButton.isEnabled = false
+        registerButton.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
     }
     
     fileprivate func setupStackView() {
@@ -181,6 +190,27 @@ class RegistrationController: UIViewController {
         } else {
             registrationViewModel.password = textField.text
         }
+    }
+    
+    @objc fileprivate func handleRegister() {
+        self.handleTapGesture(gesture: UITapGestureRecognizer())
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (data, error) in
+            if let error = error {
+                self.showHUDWithError(error: error)
+            }
+        }
+    }
+    
+    fileprivate func showHUDWithError(error: Error) {
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Failed Registration"
+        hud.detailTextLabel.text = error.localizedDescription
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 3.0)
+        
     }
 }
 

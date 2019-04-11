@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3E7C7AAA21664342165AC3 /* Pods_Jobber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A82D676F5D33E7A82B1774 /* Pods_Jobber.framework */; };
 		A44F7DED223CF5B400E48FE9 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DEC223CF5B400E48FE9 /* CardViewModel.swift */; };
 		A44F7DEF223CFB8A00E48FE9 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DEE223CFB8A00E48FE9 /* Advertiser.swift */; };
 		A44F7DF2223D013800E48FE9 /* UIimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7DF1223D013800E48FE9 /* UIimageView.swift */; };
@@ -25,9 +26,13 @@
 		A490BF29223B77D900C161CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490BF28223B77D900C161CB /* User.swift */; };
 		A4BFC65E225ECE3400E98BA1 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC65D225ECE3400E98BA1 /* RegistrationViewModel.swift */; };
 		A4BFC660225ED5E400E98BA1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC65F225ED5E400E98BA1 /* Theme.swift */; };
+		A4BFC663225EDD9D00E98BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4BFC662225EDD9C00E98BA1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29A82D676F5D33E7A82B1774 /* Pods_Jobber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D49B50C9BA8097E88CC2E9B /* Pods-Jobber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jobber/Pods-Jobber.debug.xcconfig"; sourceTree = "<group>"; };
+		4013C8471E168BE8ADDC252B /* Pods-Jobber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobber.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jobber/Pods-Jobber.release.xcconfig"; sourceTree = "<group>"; };
 		A44F7DEC223CF5B400E48FE9 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		A44F7DEE223CFB8A00E48FE9 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		A44F7DF1223D013800E48FE9 /* UIimageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageView.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		A490BF28223B77D900C161CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A4BFC65D225ECE3400E98BA1 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		A4BFC65F225ED5E400E98BA1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A4BFC662225EDD9C00E98BA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +61,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3E7C7AAA21664342165AC3 /* Pods_Jobber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23240A1D65AE597435B009BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D49B50C9BA8097E88CC2E9B /* Pods-Jobber.debug.xcconfig */,
+				4013C8471E168BE8ADDC252B /* Pods-Jobber.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A44F7DEA223CF59200E48FE9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +100,8 @@
 			children = (
 				A490BEEB223A1B7600C161CB /* Jobber */,
 				A490BEEA223A1B7600C161CB /* Products */,
+				23240A1D65AE597435B009BB /* Pods */,
+				D87EAEFB1131C383012D7BB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,17 +116,18 @@
 		A490BEEB223A1B7600C161CB /* Jobber */ = {
 			isa = PBXGroup;
 			children = (
+				A490BEEC223A1B7600C161CB /* AppDelegate.swift */,
 				A44F7DEA223CF59200E48FE9 /* ViewModels */,
 				A490BF27223B77CE00C161CB /* Model */,
 				A490BF20223A261900C161CB /* Views */,
 				A44F7DEB223CF59F00E48FE9 /* Controllers */,
 				A4BFC661225ED5E700E98BA1 /* Services */,
 				A490BF1F223A1BA700C161CB /* Extensions */,
-				A490BEEC223A1B7600C161CB /* AppDelegate.swift */,
 				A490BEF0223A1B7600C161CB /* Main.storyboard */,
 				A490BEF6223A1B7700C161CB /* Assets.xcassets */,
 				A490BEF8223A1B7700C161CB /* LaunchScreen.storyboard */,
 				A490BEFB223A1B7700C161CB /* Info.plist */,
+				A4BFC662225EDD9C00E98BA1 /* GoogleService-Info.plist */,
 			);
 			path = Jobber;
 			sourceTree = "<group>";
@@ -151,6 +170,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		D87EAEFB1131C383012D7BB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29A82D676F5D33E7A82B1774 /* Pods_Jobber.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A490BF14223A1B7800C161CB /* Build configuration list for PBXNativeTarget "Jobber" */;
 			buildPhases = (
+				2040932737E913B385D96C12 /* [CP] Check Pods Manifest.lock */,
 				A490BEE5223A1B7600C161CB /* Sources */,
 				A490BEE6223A1B7600C161CB /* Frameworks */,
 				A490BEE7223A1B7600C161CB /* Resources */,
+				3201FA174471C3E4834F0EDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,12 +240,78 @@
 			buildActionMask = 2147483647;
 			files = (
 				A490BEFA223A1B7700C161CB /* LaunchScreen.storyboard in Resources */,
+				A4BFC663225EDD9D00E98BA1 /* GoogleService-Info.plist in Resources */,
 				A490BEF7223A1B7700C161CB /* Assets.xcassets in Resources */,
 				A490BEF2223A1B7600C161CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2040932737E913B385D96C12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jobber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3201FA174471C3E4834F0EDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Jobber/Pods-Jobber-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jobber/Pods-Jobber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A490BEE5223A1B7600C161CB /* Sources */ = {
@@ -381,6 +476,7 @@
 		};
 		A490BF15223A1B7800C161CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D49B50C9BA8097E88CC2E9B /* Pods-Jobber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,6 +495,7 @@
 		};
 		A490BF16223A1B7800C161CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4013C8471E168BE8ADDC252B /* Pods-Jobber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
