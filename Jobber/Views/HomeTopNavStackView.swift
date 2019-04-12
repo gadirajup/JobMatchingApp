@@ -14,7 +14,7 @@ class HomeTopNavStackView: UIStackView {
     
     let settingsButton = UIButton(type: .system)
     let messageButton = UIButton(type: .system)
-    let logoLabel = UILabel()
+    let logo = UIImageView(image: #imageLiteral(resourceName: "TitleLogo"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,15 +30,23 @@ class HomeTopNavStackView: UIStackView {
     fileprivate func setupUI() {
         settingsButton.setImage(#imageLiteral(resourceName: "Profile").withRenderingMode(.alwaysOriginal), for: .normal)
         messageButton.setImage(#imageLiteral(resourceName: "Messages").withRenderingMode(.alwaysOriginal), for: .normal)
-        logoLabel.text = "Jobber"
-        logoLabel.font = UIFont.systemFont(ofSize: 42, weight: .heavy)
-        logoLabel.textColor = Theme.theme.titleColor
     }
     
     fileprivate func setupStackView() {
-        [settingsButton, logoLabel, messageButton].forEach({ (view) in
+        
+        settingsButton.translatesAutoresizingMaskIntoConstraints = false
+        settingsButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
+        settingsButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        
+        messageButton.translatesAutoresizingMaskIntoConstraints = false
+        messageButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
+        messageButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        
+        [settingsButton, messageButton].forEach({ (view) in
             addArrangedSubview(view)
         })
+        
+        alignment = .center
         
         //StackView Settings
         axis = .horizontal
@@ -46,7 +54,7 @@ class HomeTopNavStackView: UIStackView {
         
         //StackView Constraints
         isLayoutMarginsRelativeArrangement = true
-        layoutMargins = .init(top: 0, left: 16, bottom: 0, right: 16)
+        layoutMargins = .init(top: 0, left: 32, bottom: 0, right: 32)
         heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     

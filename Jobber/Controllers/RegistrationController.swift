@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 import JGProgressHUD
 
 class RegistrationController: UIViewController {
@@ -15,7 +14,6 @@ class RegistrationController: UIViewController {
     // Properties
     let registrationViewModel = RegistrationViewModel()
 
-    
     // UI Elements
     let gradientLayer = CAGradientLayer()
     let selectPhotoButton = UIButton(type: .system)
@@ -23,21 +21,27 @@ class RegistrationController: UIViewController {
     let emailTextField = CustomTextField()
     let passwordTextField = CustomTextField()
     let registerButton = UIButton(type: .system)
+    let registeringHud = JGProgressHUD(style: .dark)
     lazy var stackView = UIStackView(arrangedSubviews: [selectPhotoButton, fullNameTextField, emailTextField, passwordTextField, registerButton])
-    
     
     // Init
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup()
-        setupNotificationObservers()
+        setupView()
+        setupSelectPhotoButton()
+        setupFullNameTextField()
+        setupEmailTextField()
+        setupPasswordTextField()
+        setupRegisterButton()
+        setupStackView()
         setupGestures()
         setupRegistrationViewModelObserver()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         setupNotificationObservers()
     }
     
@@ -55,16 +59,6 @@ class RegistrationController: UIViewController {
     
     //MARK:- Setup Functions
     
-    fileprivate func setup() {
-        setupView()
-        setupSelectPhotoButton()
-        setupFullNameTextField()
-        setupEmailTextField()
-        setupPasswordTextField()
-        setupRegisterButton()
-        setupStackView()
-    }
-    
     fileprivate func setupRegistrationViewModelObserver() {
         registrationViewModel.isFormValidObserver = { [weak self] (isFormValid) in
             self?.registerButton.isEnabled = isFormValid
@@ -78,6 +72,14 @@ class RegistrationController: UIViewController {
         
         registrationViewModel.image.bind { [weak self] (image) in
             self?.selectPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
+        
+        registrationViewModel.isRegistering.bind { [weak self] (bool) in
+            if bool == true {
+                self?.registeringHud.show(in: self!.view)
+            } else {
+                self?.registeringHud.dismiss()
+            }
         }
     }
     
@@ -170,7 +172,7 @@ class RegistrationController: UIViewController {
         let bottomSpace = view.frame.height - stackView.frame.origin.y - stackView.frame.height
         let difference = keyboardFrame.height - bottomSpace
         
-        view.transform = CGAffineTransform(translationX: 0, y: -difference - 8)
+        view.transform = CGAffineTransform(translationX: 0, y: -difference)
     }
     
     @objc
@@ -206,13 +208,11 @@ class RegistrationController: UIViewController {
     
     @objc fileprivate func handleRegister() {
         self.handleTapGesture(gesture: UITapGestureRecognizer())
-        guard let email = emailTextField.text else {return}
-        guard let password = passwordTextField.text else {return}
-        
-        Auth.auth().createUser(withEmail: email, password: password) { (data, error) in
-            if let error = error {
-                self.showHUDWithError(error: error)
-            }
+        self.registrationViewModel.isRegistering.value = true
+        registrationViewModel.registerUser { (error) in
+            if let error = error { self.showHUDWithError(error: error) }
+            self.registrationViewModel.isRegistering.value = false
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -223,12 +223,12 @@ class RegistrationController: UIViewController {
     }
     
     fileprivate func showHUDWithError(error: Error) {
+        registeringHud.dismiss()
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Failed Registration"
         hud.detailTextLabel.text = error.localizedDescription
         hud.show(in: self.view)
         hud.dismiss(afterDelay: 3.0)
-        
     }
 }
 

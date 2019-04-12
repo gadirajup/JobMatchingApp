@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeController: UIViewController {
 
@@ -27,8 +28,24 @@ class HomeController: UIViewController {
         setupDummyCardViewModels()
         setupDummyCards()
         setupLayout()
+        fetchUsersFromFirestore()
         
         topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
+    }
+    
+    fileprivate func fetchUsersFromFirestore() {
+        Firestore.firestore().collection("users").getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Error", error.localizedDescription)
+            }
+            
+            if let snapshot = snapshot {
+                snapshot.documents.forEach({ (document) in
+                    let userDictionary = document.data()
+                    print(userDictionary)
+                })
+            }
+        }
     }
     
     fileprivate func setupDummyCardViewModels() {
